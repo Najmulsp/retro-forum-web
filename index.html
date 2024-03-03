@@ -13,11 +13,11 @@
     <header>
         <!-- navbar -->
         <section class="container mx-auto lg:px-24 px-8 py-10">
-            <div class="flex justify-between border-red-700">
-                <div class="border-yellow-700">
+            <div class="flex flex-col lg:flex-row  justify-between gap-6 ">
+                <div class="">
                     <h1 class="text-3xl font-bold">ReTro</h1>
                 </div>
-                <div class="border-green-700 flex gap-6">
+                <div class=" flex gap-4 lg:gap-6">
                     <img src="images/home.svg" alt="">
                     <img src="images/edit.svg" alt="">
                     <img src="images/contact.svg" alt="">
@@ -27,18 +27,88 @@
             </div>
             
         </section>
-<!-- nav section -->
+
 
 <!-- banner section -->
+<section class="container mx-auto lg:px-24 px-8 ">
+     <div class="lg:h-96 bg-[url(images/bgbanner.png)] bg-no-repeat bg-contain bg-[#12132D] flex flex-col lg:flex-row  justify-between items-center bg-cover rounded-2xl p-14 gap-6">
+       <!-- <div class="bg-[url(images/bgbanner.png)]">-->
+        <div class="space-y-4 lg:space-y-10">
+            <h1 class="text-2xl lg:text-6xl font-extrabold text-white">Welcome to the <br> <span class="text-[#797DFC]">ReTro</span> Forum</h1>
+            <p class="text-white">Share your favorite opinion and win and wp forum coffee mug!</p>
+            <div class="space-y-4">
+                <input type="text" placeholder="Search here anything " class="p-6 w-96 rounded-full">
+                <button class="btn btn-primary lg:-translate-x-36 rounded-full w-96 lg:w-32">Search</button>
+            </div>
+            <!-- <button class="btn btn-wide">Search here anything
+                <button class="btn btn-primary ">Search</button>
+            </button> -->
+        </div>
+        <div class="border-purple-700 rounded-2xl bg-white h-72 p-8 w-96 space-y-8">
+            <div class="flex justify-between items-center">
+                <p>Registered Users</p>
+                <p>01</p>
+            </div>
+            <div class="flex justify-between">
+                <p>Forum</p>
+                <p>01</p>
+            </div>
+            <div class="flex justify-between">
+                <p>Topics</p>
+                <p>01</p>
+            </div>
+            <div class="flex justify-between">
+                <p>Replies</p>
+                <p>01</p>
+            </div>
+        </div>
+    </div>
+</section>
     </header>
 <!-- main section -->
     <main>
+        <!-- let's discuss section -->
+<section>
+    
+</section>
 
+<!-- join our forum section -->
+<section class="container mx-auto lg:px-24 px-8 mt-10">
+    <div class="hero lg:h-96 bg-[#12132D] rounded-2xl">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img src="images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
+          <div>
+            <h1 class="text-5xl text-white font-bold">Join Our Forum</h1>
+            <p class="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <button class="btn btn-primary w-36 rounded-full">Registered Now</button>
+          </div>
+        </div>
+      </div>
+</section>
+
+<!-- letest post section -->
     </main>
     <!-- footer section -->
-    <footer>
-
-    </footer>
+    
+        <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10">
+            <div>
+                <h1 class="text-6xl font-extrabold">ReTro</h1>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br> in a piece of classical Latin literature from 45 BC</p>
+            </div>
+            <nav>
+              <div class="grid grid-flow-col gap-4">
+                <img src="images/logo-twitter 2.svg" alt="">
+                <img src="images/facebook (2).svg" alt="">
+                <img src="images/instagram.svg" alt="">
+                <img src="images/github.svg" alt="">
+               
+              </div>
+            </nav> 
+            <aside>
+              <p>2024, All Rights Reserved.</p>
+            </aside>
+          </footer>
+    
     
 </body>
 </html>
