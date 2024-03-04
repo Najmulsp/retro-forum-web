@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Our Youth Forum</title>
     <!-- daisy ui link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,7 +15,7 @@
         <section class="container mx-auto lg:px-24 px-8 py-10">
             <div class="flex flex-col lg:flex-row  justify-between gap-6 ">
                 <div class="">
-                    <h1 class="text-6xl lg:text-4xl font-bold">ReTro</h1>
+                    <h1 class="text-6xl lg:text-4xl font-bold">Youth Forum</h1>
                 </div>
                 <div class=" flex gap-4 lg:gap-6">
                   
@@ -35,11 +35,11 @@
      <div class="lg:h-96 bg-[url(images/bgbanner.png)] bg-no-repeat bg-contain bg-[#12132D] flex flex-col lg:flex-row  justify-between items-center bg-cover rounded-2xl p-8 lg:p-14 gap-6">
        <!-- <div class="bg-[url(images/bgbanner.png)]">-->
         <div class="space-y-4 lg:space-y-10">
-            <h1 class="text-4xl lg:text-6xl font-extrabold text-white">Welcome to the <br> <span class="text-[#797DFC]">ReTro</span> Forum</h1>
-            <p class="text-white">Share your favorite opinion and win and wp forum coffee mug!</p>
+            <h1 class="text-4xl lg:text-6xl font-extrabold text-white">Welcome to the <br> <span class="text-[#797DFC]">Youth</span> Forum</h1>
+            <p class="text-white"> The forum aims to bring together young people from across the world, enabling them to engage in discussions on development issues</p>
             <div class="space-y-4">
-                <input type="text" placeholder="Search here anything " class="p-3 lg:p-6 w-96 rounded-full">
-                <button class="btn btn-primary lg:-translate-x-36 rounded-full w-96 lg:w-32">Search</button>
+                <input id="search-field" type="text" placeholder="Search here anything " class="p-3 lg:p-6 w-96 rounded-full">
+                <button onclick="searchHandle()" class="btn btn-primary lg:-translate-x-36 rounded-full w-96 lg:w-32">Search</button>
             </div>
             <!-- <button class="btn btn-wide">Search here anything
                 <button class="btn btn-primary ">Search</button>
@@ -71,9 +71,13 @@
         <!-- let's discuss section -->
 <section  class="container mx-auto lg:px-24 px-8 mt-10">
         <h1 class="text-6xl font-bold text-center">Let’s Discuss</h1>
-        <p class="text-center p-6">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+        <p class="text-center p-6">Our Youth Forum Is Open To All Youth Of All Nations; Who Believe In <br> Their Power Of Making Changes.</p>
         <!-- overall div for card info -->
-        <div id="discuss-container"></div>
+        <div class="flex ">
+            <div id="discuss-container"></div>
+            <div id="message"></div>
+        </div>
+        
     <!-- <div class="border-rose-600 bg-red-100 flex flex-col lg:flex-row justify-between gap-6 ">
         <div class="bg-orange-200  flex flex-col lg:flex-row justify-between  rounded-2xl ">
             <div class="w-16 mx-auto m-6 lg:ml-6"> <img class="mx-auto" src="images/flag.svg" alt=""></div>
@@ -132,7 +136,8 @@
           <img src="images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
           <div class="text-center lg:text-left">
             <h1 class="text-5xl text-white font-bold">Join Our Forum</h1>
-            <p class="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <p class="py-6 text-white">
+                Joining in The Our Youth Forum Initiatives your explaination what kind of support your organization <br> can provide and if you have a specific idea or project that your organization <br> would like to implement through the initiative</p>
             <button class="btn btn-primary w-36 rounded-full">Registered Now</button>
           </div>
         </div>
@@ -142,7 +147,7 @@
 <!-- letest post section -->
 <section  class="container mx-auto lg:px-24 px-8 mt-10">
     <h1 class="text-6xl font-bold text-center">Latest Posts</h1>
-        <p class="text-center p-6">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+        <p class="text-center p-6">On 25 April 2017, a group of young Bangladeshi presented an initiative at the National Youth Conference <br> in Dhaka to engage in dialogue with youth around the world.</p>
         <div id="post-container"></div>
         <!-- <div class="grid grid-cols-1 lg:grid-cols-3 gap-6"> -->
             <!-- <div class="card w-96 bg-base-100 shadow-xl">
@@ -170,8 +175,8 @@
     
         <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10">
             <div>
-                <h1 class="text-6xl font-extrabold">ReTro</h1>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br> in a piece of classical Latin literature from 45 BC</p>
+                <h1 class="text-6xl font-extrabold">Youth</h1>
+                <p>The OYF is an annual International forum that takes place in the City of Dhaka,Bangladesh</p>
             </div>
             <nav>
               <div class="grid grid-flow-col gap-4">
@@ -183,7 +188,7 @@
               </div>
               
             </nav> 
-            <div class="divide-x-reverse divider-horizontal text-red-950">hr  or divider</div>
+            <hr class="border-gray-500 border-[1px] my-2 lg:my-6 w-3/4 mx-auto border-dashed">
             <aside>
               <p class="">2024, All Rights Reserved.</p>
             </aside>

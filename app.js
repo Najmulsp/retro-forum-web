@@ -55,37 +55,48 @@ const allPosts = async() =>{
         </div>
 
         
-        <div class="flex flex-col bg-green-200 gap-10 p-6 rounded-2xl">
-            <div class="flex justify-between">
-                <h2>Title</h2>
-                <p>Mark as read (4)</p>
-            </div>
-
-            <div class="flex justify-between gap-10 bg-white rounded-2xl p-4 w-96">
-                <h1>10 Kids Unaware of Their <br> Halloween Costume</h1>
-                <p class="flex justify-center items-center gap-2">
-                    <img src="images/eye.svg" alt="">
-                    <span>1,568</span>
-                </p>
-            </div>
-        </div> 
+        
     `;
+
+// mark showing container
+const Nam =  document.getElementById('message');
+const Nam = (title, view) => {
+    const mark = document.createElement('div');
+    mark.classList = 'px-5'
+    mark.innerHTML = `
+    <div class="flex my-4  mx-auto rounded-xl pl-2 py-2 justify-between bg-white">
+                      <div class="font-mulish my-3 text-left font-bold text-xl">${title}</div>
+                      <div class="flex items-center gap-2 pr-2">
+                      <img src="images/eye.svg" alt=""><span>${view}</span>
+                      </div>
+                    </div>
+    `
+    Nam.appendChild(mark);
+    readCount();
+  }
+  let count = 0;
+const readCount = () => {
+  count++;
+  const readCount = document.getElementById('read-count');
+  readCount.innerText = `(${count})`;
+}
+        
          //  step-4: append child
          discussContainer.appendChild(infoCard);
 // show name onclick
-       const asider =  document.getElementById('message');
-       asider.addEventListener('click',function(){
-        const div =document.createElement('div')
-            div.classList = `flex justify-between gap-10 bg-white rounded-2xl p-4 w-96`;
-            div.innerHTML = `
+    //    const asider =  document.getElementById('message');
+    //    asider.addEventListener('click',function(){
+    //     const div =document.createElement('div')
+    //         div.classList = `flex justify-between gap-10 bg-white rounded-2xl p-4 w-96`;
+    //         div.innerHTML = `
 
-             `
-       })
+    //          `
+    //    })
 
                 })
                 }
 
-        allPosts();
+       
 
 
         //  function showName(){
@@ -116,7 +127,7 @@ const letestPosts = async() =>{
      postContainer.classList=`grid grid-cols-1 lg:grid-cols-3 gap-6`
 
      data.forEach(post =>{
-    // // console.log(post)
+    // console.log(post)
      // step-2: create a div as post container
      const postCard =document.createElement('div'); 
     //  postCard.classList = `grid grid-cols-1 lg:grid-cols-3 gap-6`;
@@ -148,4 +159,25 @@ const letestPosts = async() =>{
                  })
                 }
 
+                
+         allPosts();
         letestPosts();
+
+
+
+
+
+        const searchHandle = () => {
+            const inputField = document.getElementById('search-field');
+            const inputText = inputField.value.toLowerCase();
+          
+            if (inputText.length === 0) {
+              alert('Please type something for search');
+            }
+          
+            spinner.classList.remove('hidden');
+            allPostContainer.classList.add('hidden');
+            categoryPostContainer.classList.remove('hidden');
+            noResult.classList.add('hidden');
+            setTimeout(DisplayBySearch, 2000, inputText);
+          }
